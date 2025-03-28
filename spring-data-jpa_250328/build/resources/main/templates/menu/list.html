@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>메뉴번호</th>
+            <th>메뉴이름</th>
+            <th>메뉴가격</th>
+            <th>카테고리코드</th>
+            <th>판매상태</th>
+        </tr>
+        <tr th:each="menu : ${ menuList }">
+            <th th:text="${ menu.menuCode }"></th>
+            <th th:text="${ menu.menuName }"></th>
+            <th th:text="${ menu.menuPrice }"></th>
+            <th th:text="${ menu.categoryCode }"></th>
+            <th th:text="${ menu.orderableStatus }"></th>
+        </tr>
+    </table>
+
+<!--    <div id="paging">-->
+<!--        &lt;!&ndash; 맨앞 페이지로 이동 &ndash;&gt;-->
+<!--        <button th:onclick="'location.href=\'/menu/list?page=' + ${ paging.startPage } + '\''">-->
+<!--            ⏪-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; 이전 페이지로 이동 &ndash;&gt;-->
+<!--        <button th:onclick="'location.href=\'/menu/list?page=' + ${ paging.currentPage - 1 } + '\''"-->
+<!--                th:disabled="${ menuList.first }">-->
+<!--            ◀-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; 숫자 버튼 &ndash;&gt;-->
+<!--        <th:block th:each="page : ${ #numbers.sequence(paging.startPage, paging.endPage) }">-->
+<!--            <button th:onclick="'location.href=\'/menu/list?page=' + ${ page } + '\''"-->
+<!--                    th:text="${ page }"-->
+<!--                    th:disabled="${ paging.currentPage eq page }">-->
+<!--            </button>-->
+<!--        </th:block>-->
+
+<!--        &lt;!&ndash; 다음 페이지로 이동 &ndash;&gt;-->
+<!--        <button th:onclick="'location.href=\'/menu/list?page=' + ${ paging.currentPage + 1 } + '\''"-->
+<!--                th:disabled="${ menuList.last }">-->
+<!--            ▶-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; 맨뒤 페이지로 이동 &ndash;&gt;-->
+<!--        <button th:onclick="'location.href=\'/menu/list?page=' + ${ paging.endPage } + '\''">-->
+<!--            ⏩-->
+<!--        </button>-->
+<!--    </div>-->
+</body>
+</html>
