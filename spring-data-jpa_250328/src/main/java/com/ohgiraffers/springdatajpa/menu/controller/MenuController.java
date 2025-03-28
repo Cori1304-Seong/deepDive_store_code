@@ -3,6 +3,7 @@ package com.ohgiraffers.springdatajpa.menu.controller;
 import com.ohgiraffers.springdatajpa.menu.model.dto.CategoryDTO;
 import com.ohgiraffers.springdatajpa.menu.model.dto.MenuDTO;
 import com.ohgiraffers.springdatajpa.menu.model.service.MenuService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +15,7 @@ import java.util.List;
 @RequestMapping("/menu")
 // 필드에 final 붙은 객체를 자동으로 생성자 주입을 해준다.
 @RequiredArgsConstructor // DI 의존성 주입
-
+@Tag(name = "MenuController", description = "Menu와 관련된 view를 반환한다.")
 public class MenuController {
 
     private final MenuService menuService;
