@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/login
+    username: ohgiraffers
+    password: 1234
+
+jwt:
+  key: asdkfjlkawddfek543154ipo1u4djskafjklas34234ydsd
+  time: 86400000
